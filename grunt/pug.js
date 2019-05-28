@@ -8,7 +8,7 @@ module.exports = {
 		},
 		files: {
 			'<%=project.dist %>/index.html': '<%=project.app %>/tpls/index.pug',
-			'<%=project.dist %>/example.html': '<%=project.app %>/tpls/example.pug'
+			'<%=project.dist %>/configuring.html': '<%=project.app %>/tpls/configuring.pug'
 		}
 	}
 };
