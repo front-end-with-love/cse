@@ -9,6 +9,7 @@
         cursor: pointer
         display: block
         height: 40px
+        outline: none
         user-select: none
         -webkit-user-select: none
         .select2-selection__rendered
@@ -69,9 +70,15 @@
     padding: 0
 
 .select2-results__option
-    padding: 6px
+    padding: 7.5px 14px
     user-select: none
     -webkit-user-select: none
+    font: 400 12px/1 $font-default
+    color: $color-black
+    &:first-child
+        padding-top: 15px
+    &:last-child
+        padding-bottom: 15px
     &[aria-selected]
         cursor: pointer
 
@@ -252,13 +259,16 @@
     .select2-results > .select2-results__options
         max-height: 200px
         overflow-y: auto
+        position: relative
     .select2-results__option
         &[role=group]
             padding: 0
         &[aria-disabled=true]
             color: #999
         &[aria-selected=true]
-            background-color: #ddd
+            //background-color: #ddd
+            text-decoration: underline
+            color: $color-blue
         .select2-results__option
             padding-left: 1em
             .select2-results__group
@@ -279,8 +289,9 @@
                                 margin-left: -5em
                                 padding-left: 6em
     .select2-results__option--highlighted[aria-selected]
-        background-color: #5897fb
-        color: white
+        //background-color: #5897fb
+        text-decoration: underline
+        color: $color-blue
     .select2-results__group
         cursor: default
         display: block
@@ -438,8 +449,9 @@
     .select2-dropdown--below
         border-top: none
     .select2-results > .select2-results__options
-        max-height: 200px
+        max-height: 175px
         overflow-y: auto
+        position: relative
     .select2-results__option
         &[role=group]
             padding: 0
