@@ -1,0 +1,102 @@
+.header
+    padding: 31px 0 44px
+    background-color: $color-white
+    box-shadow: 5.592px 8.29px 68px 0 rgba($color-black, 0.06)
+    &__container
+        @include glass
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        position: relative
+        font: 700 16px/1.333 $font-default
+        text-decoration: none
+        color: $color-black
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &:before
+            content: ''
+            @extend .icon-logo
+            margin: 0 20px 0 0
+    &__tabs
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0 50px 0 auto
+    &__tab
+        background: $color-white
+        box-shadow: 0.616px 0.788px 25px 0px rgba($color-black, 0.07)
+        height: 55px
+        width: 160px
+        position: relative
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate3d(-50%,-50%,0)
+        &:first-child
+            border-radius: 27.5px 0 0 27.5px
+            &:after
+                @extend .icon-hp-color
+                margin: 0 0 0 9px
+            &.header__tab_active:after
+                @extend .icon-hp-white
+        &:last-child
+            border-radius: 0 27.5px 27.5px 0
+            &:after
+                @extend .icon-dell-emc-color
+            &.header__tab_active:after
+                @extend .icon-dell-emc-white
+        &_active
+            background-color: $color-blue
+            width: 160px
+            height: 55px
+    &__form
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__input-text
+        user-select: none
+        width: 32.742155525238745vw
+        max-width: 480px
+        outline: none
+        border: 1px $color-white-2 solid
+        padding: 17.5px 25px 17.5px
+        margin: 0
+        border-radius: 27.5px 0 0 27.5px
+        display: block
+        font-weight: 400
+        font-size: 14px
+        line-height: normal
+        font-family: $font-default
+        color: $color-black
+        text-align: left
+        background: $color-white
+        box-shadow: 0.616px 0.788px 25px 0 rgba($color-black, 0.07)
+        transition: all 0.3s ease
+        @include placeholder
+            color: $color-gray
+            transition: all 0.3s ease
+        &:focus
+            outline: none
+            color: $color-black
+            transition: all 0.3s ease
+    &__btn
+        width: 85px
+        height: 55px
+        border: none
+        outline: none
+        border-radius: 0 27.5px 27.5px 0
+        background: $color-blue
+        position: relative
+        cursor: pointer
+        &:after
+            content: ''
+            @extend .icon-search
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate3d(-50%,-50%,0)

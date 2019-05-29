@@ -1,0 +1,113 @@
+.configuration
+    &__container
+        @include glass
+        &_top
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+        &_bottom
+    &__title
+        font: 700 22px/1.091 $font-default
+        color: $color-black
+        margin: 0 0 37px
+    &__save-btn
+        text-decoration: none
+        width: 263px
+        height: 43px
+        border: 1px $color-blue solid
+        border-radius: 21.5px
+        color: $color-blue
+        font: 400 12px/1 $font-default
+        display: flex
+        justify-content: center
+        align-items: center
+        &:before
+            content: ''
+            @extend .icon-save-black
+            margin: 0 12px 0 0
+    &__content
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        background-color: $color-white
+        box-shadow: 0.616px 0.788px 25px 0 rgba($color-black, 0.07)
+        border-top: 1px $color-gray-3 solid
+        padding: 0 70px
+        border-radius: 0 0 7px 7px
+    &__col
+        &:first-child
+        &:nth-child(2)
+    &__item
+        padding: 29px 0 40px 0
+        border-bottom: 1px $color-white-4 solid
+        &:last-child
+            margin-bottom: 0
+    &__item-row
+        &_top
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        &_bottom
+            padding: 21px 0 0 120px
+    &__table
+        margin: 0
+        padding: 0
+        border-spacing: 0
+        border-collapse: collapse
+    &__tr
+        vertical-align: top
+    &__td
+        padding: 34px 0 0
+        &:first-child
+            width: 120px
+        &:nth-child(2)
+            width: 382px
+    &__text-selected
+        font: 700 14px/1.285 $font-default
+        color: $color-black
+    &__text
+        font: 400 14px/1.285 $font-default
+        color: $color-black
+    &__text-inner
+        padding-bottom: 9px
+        display: flex
+    &__link
+        font: 400 12px/1 $font-default
+        color: $color-blue
+        margin: 13px 0 0 0
+    &__add-link
+        font: 400 14px/1.714 $font-default
+        color: $color-blue
+        position: relative
+        padding: 0 0 0 33px
+        text-decoration: none
+        overflow: hidden
+        &:before
+            content: ''
+            @extend .icon-plus
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translate3d(0,-50%,0)
+        &:after
+            content: ''
+            width: calc(100% - 34px)
+            height: 1px
+            position: absolute
+            left: 33px
+            bottom: 0
+            border-bottom: 1px $color-blue dotted
+    &__item-line
+        margin: 0 0 14px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &:last-child
+            margin-bottom: 0
+    .select2
+        margin-right: 25px
+        &:last-child
+            margin-right: 0
+    &__link-remove
+        @extend .icon-trash-gray
+        text-decoration: none

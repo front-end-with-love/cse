@@ -1,3 +1,12 @@
 header.header
     .header__container
-        a.header__logo(href="#") 
+        a.header__logo(href="/")
+            | Конфигуратор
+            br
+            | серверного оборудования
+        .header__tabs
+            a.header__tab.header__tab_active(href="#")
+            a.header__tab(href="#")
+        form.header__form
+            input.header__input-text(type="text" value="" placeholder="Поиск по партномеру / конфигуратору")
+            button.header__btn(type="submit")

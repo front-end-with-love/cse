@@ -1,15 +1,19 @@
 var app = new Vue({
     el: '#app',
-    data: {
+    data: {},
+    computed: {},
+    methods: {
+        // initSelect2: function () {
+            // $('.configuration__select').select2();
+        // }
     },
-	computed: {
-	},
-	methods: {
-		exampleMethod: function () {
-			console.log('exampleMethod init!');
-		}
-	},
-	mounted() {
-		this.exampleMethod;
-	}
+    mounted() {
+        $('.configuration__select_long').select2({
+            minimumResultsForSearch: -1
+        });
+        $('.configuration__select_shot').select2({
+            width: '105px',
+            minimumResultsForSearch: -1
+        });
+    }
 });
