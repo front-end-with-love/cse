@@ -6,12 +6,22 @@ var app = new Vue({
     mounted() {
         $('.configuration__select_long').select2({
             minimumResultsForSearch: -1,
-        }).on("select2:open", function () {
-            $('.select2-results__options').perfectScrollbar();
+            // dropdownAutoWidth : true
+        }).on('select2:open', function () {
+            // console.log('хуй')
+            $('.select2-results__options').perfectScrollbar({
+                // useBothWheelAxes: true,
+                // minScrollbarLength: 40,
+                // maxScrollbarLength: 40
+                // suppressScrollX: true,
+                // useBothWheelAxes: true,
+                // maxScrollbarLength: 40
+            });
         });
         $('.configuration__select_shot').select2({
             width: '105px',
-            minimumResultsForSearch: -1
+            minimumResultsForSearch: -1,
+            // dropdownAutoWidth : true
         });
     }
 });

@@ -104,28 +104,26 @@
 @mixin default-btn
     user-select: none
     display: inline-block
-    font-family: "Arial", sans-serif
-    font-weight: bold
-    font-size: 25px
-    text-transform: uppercase
-    color: $color-black
+    font-family: $font-default
+    font-weight: 400
+    font-size: 14px
+    text-transform: none
+    color: $color-white
     width: 100%
     height: auto
-    background: $color-white
-    border: 3px solid $color-black
-    line-height: 1
-    padding: 22px 0
+    background: $color-blue
+    border: 1px solid $color-blue
+    line-height: 1.714
+    padding: 9.5px 0
     cursor: pointer
-    user-select: none
+    border-radius: 22px
     outline: none
     text-decoration: none
-    border-radius: 0
     text-align: center
-    transition: all 0.2s ease
+    transition: background 0.2s ease
     &:hover
-        background: $color-black
-        color: $color-white
-        transition: all 0.2s ease
+        background: $color-blue-2
+        transition: background 0.2s ease
 // FORM ELEMENTS : end
 
 // TYPO : begin

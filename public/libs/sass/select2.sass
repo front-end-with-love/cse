@@ -60,6 +60,7 @@
     left: -100000px
     width: 100%
     z-index: 1051
+    padding: 0 0 18px
 
 .select2-results
     display: block
@@ -67,7 +68,6 @@
 .select2-results__options
     list-style: none
     margin: 0
-    padding: 0
 
 .select2-results__option
     padding: 7.5px 14px
@@ -76,9 +76,9 @@
     font: 400 12px/1 $font-default
     color: $color-black
     &:first-child
-        padding-top: 15px
+        padding-top: 19px
     &:last-child
-        padding-bottom: 15px
+        padding-bottom: 19px
     &[aria-selected]
         cursor: pointer
 
@@ -257,9 +257,14 @@
         box-shadow: none
         -webkit-appearance: textfield
     .select2-results > .select2-results__options
-        max-height: 200px
-        overflow-y: auto
+        max-height: 178px
+        //overflow-y: auto
         position: relative
+        //overflow: auto
+        overflow: hidden
+        margin: 0 auto
+        width: 100%
+        height: 100%
     .select2-results__option
         &[role=group]
             padding: 0
@@ -444,14 +449,19 @@
     .select2-dropdown
         background-color: white
         border: 1px solid transparent
+        //padding: 0 0 10px
+        padding: 0 0 20px
     .select2-dropdown--above
         border-bottom: none
     .select2-dropdown--below
         border-top: none
     .select2-results > .select2-results__options
-        max-height: 175px
-        overflow-y: auto
+        max-height: 178px
+        //overflow-y: auto
+        //overflow: auto
+        overflow: hidden
         position: relative
+        width: 100%
     .select2-results__option
         &[role=group]
             padding: 0

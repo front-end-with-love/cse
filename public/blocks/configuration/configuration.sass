@@ -21,6 +21,7 @@
         display: flex
         justify-content: center
         align-items: center
+        transform: translate3d(0,-10px,0)
         &:before
             content: ''
             @extend .icon-save-black
@@ -35,8 +36,12 @@
         padding: 0 70px
         border-radius: 0 0 7px 7px
     &__col
+        min-height: 100%
         &:first-child
         &:nth-child(2)
+            padding: 68px 67px 0 70px
+            margin: 0 0 0 74px
+            border-left: 1px $color-white-4 solid
     &__item
         padding: 29px 0 40px 0
         border-bottom: 1px $color-white-4 solid
@@ -111,3 +116,43 @@
     &__link-remove
         @extend .icon-trash-gray
         text-decoration: none
+    &__add-options
+    &__add-options-title
+        font: 700 16px/1.285 $font-default
+        color: $color-black
+    &__add-options-wrapper
+    &__add-options-item
+    &__add-options-text
+        font: 400 14px/1.285 $font-default
+        color: $color-black
+    &__link-remove
+    &__add-options-item
+    &__add-options-text
+    &__link-remove
+    &__checkout
+    &__checkout-col
+    &__checkout-sum
+        font: 700 32px/0.75 $font-default
+        color: $color-black
+    &__checkout-date
+        font: 400 14px/1.285 $font-default
+        color: $color-black
+    &__checkout-col
+    &__checkout-btn
+        @include default-btn
+    &__checkout-link
+        font: 400 12px/2 $font-default
+        color: $color-blue
+    &__help
+    &__help-row
+    &__help-text
+        font: 400 14px/1.285 $font-default
+        color: $color-black
+    &__help-row
+    &__help-tel
+        font: 700 20px/1.2 $font-default
+        color: $color-black
+    &__help
+        font: 400 14px/1.714 $font-default
+        color: $color-blue
+
