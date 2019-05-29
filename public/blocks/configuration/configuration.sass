@@ -22,10 +22,17 @@
         justify-content: center
         align-items: center
         transform: translate3d(0,-10px,0)
+        transition: background 0.3s ease, color 0.3s ease
         &:before
             content: ''
             @extend .icon-save-black
             margin: 0 12px 0 0
+            transition: background 0.3s ease
+        &:hover
+            background: $color-blue
+            color: $color-white
+            &:before
+                @extend .icon-save-white
     &__content
         display: flex
         justify-content: flex-start
@@ -39,14 +46,15 @@
         min-height: 100%
         &:first-child
         &:nth-child(2)
-            padding: 68px 67px 0 70px
+            padding: 68px 0 65px 70px
             margin: 0 0 0 74px
             border-left: 1px $color-white-4 solid
+            background: url("../img/icons/icon-logo-gray.svg") bottom 73px right 0 no-repeat
     &__item
         padding: 29px 0 40px 0
         border-bottom: 1px $color-white-4 solid
         &:last-child
-            margin-bottom: 0
+            border-bottom: none
     &__item-row
         &_top
             display: flex
@@ -80,6 +88,8 @@
         font: 400 12px/1 $font-default
         color: $color-blue
         margin: 13px 0 0 0
+        &:hover
+            text-decoration: none
     &__add-link
         font: 400 14px/1.714 $font-default
         color: $color-blue
@@ -87,6 +97,9 @@
         padding: 0 0 0 33px
         text-decoration: none
         overflow: hidden
+        transition: color 0.3s ease
+        &:hover
+            color: $color-blue-2
         &:before
             content: ''
             @extend .icon-plus
@@ -94,6 +107,9 @@
             left: 0
             top: 50%
             transform: translate3d(0,-50%,0)
+            transition: background 0.3s ease
+        &:hover:before
+            @extend .icon-plus-hover
         &:after
             content: ''
             width: calc(100% - 34px)
@@ -116,43 +132,103 @@
     &__link-remove
         @extend .icon-trash-gray
         text-decoration: none
+        transition: background 0.3s ease
+        &:hover
+            @extend .icon-trash-red
     &__add-options
+        margin: 0 0 41px
+        padding: 0 0 18px
+        border-bottom: 1px $color-white-4 solid
     &__add-options-title
         font: 700 16px/1.285 $font-default
         color: $color-black
+        margin: 0 0 24px
+        padding: 8px 0 0 0
     &__add-options-wrapper
     &__add-options-item
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0 0 19px
     &__add-options-text
         font: 400 14px/1.285 $font-default
         color: $color-black
     &__link-remove
+        margin: 0 0 0 14px
     &__add-options-item
     &__add-options-text
     &__link-remove
     &__checkout
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        margin: 0 0 37px
+        padding: 0 0 38px
+        border-bottom: 1px $color-white-4 solid
+        @include breakpoint($desktop-special)
+            flex-direction: column
     &__checkout-col
+        &:last-child
+            margin: 0 0 0 30px
+            text-align: center
+            @include breakpoint($desktop-special)
+                margin: 40px 0 0 0
+                text-align: left
     &__checkout-sum
         font: 700 32px/0.75 $font-default
         color: $color-black
+        margin: 0 0 27px
+        white-space: nowrap
+        padding: 7px 0 0 0
     &__checkout-date
         font: 400 14px/1.285 $font-default
         color: $color-black
-    &__checkout-col
+        white-space: nowrap
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &:before
+            content: ''
+            margin: 0 12px 0 0
+            @extend .icon-clock-gray
     &__checkout-btn
         @include default-btn
+        margin: 0 0 12px
+        width: 100%
+        max-width: 225px
     &__checkout-link
         font: 400 12px/2 $font-default
         color: $color-blue
+        text-align: center
     &__help
     &__help-row
+        margin: 0 0 46px
+        &:last-child
+            margin-bottom: 0
     &__help-text
-        font: 400 14px/1.285 $font-default
+        font: 400 12px/1.833 $font-default
         color: $color-black
-    &__help-row
     &__help-tel
         font: 700 20px/1.2 $font-default
         color: $color-black
-    &__help
-        font: 400 14px/1.714 $font-default
+        text-decoration: none
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0 0 22px
+        &:before
+            content: ''
+            @extend .icon-phone-black
+            margin: 0 11px 0 0
+    &__help-link
+        font: 500 14px/1.714 $font-default
         color: $color-blue
+        text-decoration: none
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &:before
+            content: ''
+            @extend .icon-question-blue
+            margin: 0 16px 0 0
 
