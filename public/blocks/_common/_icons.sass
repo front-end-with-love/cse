@@ -27,21 +27,33 @@
         background-image: url('../img/icons/icon-dell-emc-color.svg')
         width: 91px
         height: 16px
+        @include breakpoint($mobile)
+            width: calc(91px / 1.2)
+            height: calc(16px / 1.2)
     &-dell-emc-white
         @include icon
         background-image: url('../img/icons/icon-dell-emc-white.svg')
         width: 91px
         height: 16px
+        @include breakpoint($mobile)
+            width: calc(91px / 1.2)
+            height: calc(16px / 1.2)
     &-hp-color
         @include icon
         background-image: url('../img/icons/icon-hp-color.svg')
         width: 75px
         height: 32px
+        @include breakpoint($mobile)
+            width: calc(75px / 1.2)
+            height: calc(32px / 1.2)
     &-hp-white
         @include icon
         background-image: url('../img/icons/icon-hp-white.svg')
         width: 75px
         height: 32px
+        @include breakpoint($mobile)
+            width: calc(75px / 1.2)
+            height: calc(32px / 1.2)
     &-logo-gray
         @include icon
         background-image: url('../img/icons/icon-logo-gray.svg')
@@ -67,11 +79,17 @@
         background-image: url('../img/icons/icon-save-black.svg')
         width: 15px
         height: 15px
+        flex-basis: 15px
+        max-width: 15px
+        min-width: 15px
     &-save-white
         @include icon
         background-image: url('../img/icons/icon-save-white.svg')
         width: 15px
         height: 15px
+        flex-basis: 15px
+        max-width: 15px
+        min-width: 15px
     &-search
         @include icon
         background-image: url('../img/icons/icon-search.svg')

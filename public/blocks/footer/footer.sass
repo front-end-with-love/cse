@@ -4,6 +4,8 @@
     box-shadow: 5.592px 8.29px 68px 0 rgba($color-black, 0.06)
     @include breakpoint($tablet)
         margin: 76px 0 0 0
+    @include breakpoint($mobile)
+        margin: 40px 0 0 0
     &__container
         @include glass
         display: flex
@@ -14,6 +16,11 @@
             justify-content: center
             flex-wrap: wrap
             padding: 36px 20px 35px
+        @include breakpoint($mobile)
+            justify-content: flex-start
+            align-items: center
+            flex-direction: column
+            padding: 31px 20px 35px
     &__copyright
         font: 700 12px/2 $font-default
         color: $color-brown
@@ -23,6 +30,12 @@
             justify-content: center
             text-align: center
             margin: 31px 0 0 0
+        @include breakpoint($mobile)
+            width: 100%
+            font-size: 11px
+            margin: 23px 0 0 0
+        @include breakpoint($mobile-special)
+            font-size: 10px
     &__link
         text-decoration: none
         position: relative
@@ -32,6 +45,8 @@
         @include breakpoint($tablet)
             width: 50%
             justify-content: center
+        @include breakpoint($mobile)
+            width: 100%
         &_help
             font: 500 14px/1.714 $font-default
             color: $color-blue
@@ -39,6 +54,9 @@
             @include breakpoint($tablet)
                 margin-left: 0
                 order: 0
+            @include breakpoint($mobile)
+                font-size: 12px
+                margin: 0 0 23px
             &:before
                 content: ''
                 display: block

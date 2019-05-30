@@ -2,11 +2,15 @@
     padding: 31px 0 44px
     background-color: $color-white
     box-shadow: 5.592px 8.29px 68px 0 rgba($color-black, 0.06)
+    @include breakpoint($mobile)
+        padding: 14px 0 21px
     &__container
         @include glass
         display: flex
         justify-content: space-between
         align-items: center
+        @include breakpoint($mobile)
+            flex-wrap: wrap
     &__logo
         position: relative
         font: 700 16px/1.333 $font-default
@@ -15,21 +19,44 @@
         display: flex
         justify-content: flex-start
         align-items: center
+        @include breakpoint($mobile)
+            font-size: 12px
+            order: 0
+        @include breakpoint($mobile-special)
+            font-size: 11px
         &:before
             content: ''
             @extend .icon-logo
             margin: 0 20px 0 0
+            @include breakpoint($mobile)
+                width: 37px
+                height: 37px
+                margin: 0 16px 0 0
+            @include breakpoint($mobile-special)
+                margin-right: 10px
+                width: 33px
+                height: 33px
     &__tabs
         display: flex
         justify-content: flex-start
         align-items: center
         margin: 0 50px 0 auto
+        @include breakpoint($mobile)
+            order: 2
+            margin: 15px auto 0 auto
+            width: 100%
+        @include breakpoint($mobile-special)
+            width: auto
     &__tab
         background: $color-white
         box-shadow: 0.616px 0.788px 25px 0 rgba($color-black, 0.07)
         height: 55px
         width: 160px
         position: relative
+        @include breakpoint($mobile)
+            height: 40px
+        @include breakpoint($mobile-special)
+            width: 145px
         &:after
             content: ''
             display: block
@@ -40,10 +67,10 @@
         &:first-child
             border-radius: 27.5px 0 0 27.5px
             &:after
-                @extend .icon-hp-white
+                @extend .icon-hp-color
                 margin: 0 0 0 9px
             &__tab_active:after
-                @extend .icon-hp-color
+                @extend .icon-hp-white
         &:last-child
             border-radius: 0 27.5px 27.5px 0
             &:after
@@ -54,11 +81,17 @@
             background-color: $color-blue
             width: 160px
             height: 55px
+            @include breakpoint($mobile)
+                height: 40px
+            @include breakpoint($mobile-special)
+                width: 145px
     &__form
         display: flex
         justify-content: flex-start
         align-items: center
         position: relative
+        @include breakpoint($mobile)
+            order: 1
     &__input-text
         user-select: none
         width: 32.742155525238745vw
@@ -101,6 +134,10 @@
             width: 53px
             height: 53px
             border-radius: 26.5px
+        @include breakpoint($mobile)
+            width: 40px
+            height: 40px
+            border-radius: 20px
         &:after
             content: ''
             @extend .icon-search

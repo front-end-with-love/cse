@@ -5,7 +5,8 @@ var app = new Vue({
     methods: {},
     mounted() {
         $('.configuration__select_long').select2({
-            minimumResultsForSearch: -1
+            minimumResultsForSearch: -1,
+            maximumInputLength: 290
         }).on('select2:open', function () {
             $('.select2-results__options').perfectScrollbar();
         });
