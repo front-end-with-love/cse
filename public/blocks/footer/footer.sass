@@ -2,25 +2,43 @@
     margin: 80px 0 0 0
     background-color: $color-white
     box-shadow: 5.592px 8.29px 68px 0 rgba($color-black, 0.06)
+    @include breakpoint($tablet)
+        margin: 76px 0 0 0
     &__container
         @include glass
         display: flex
         justify-content: space-between
         align-items: center
         padding: 53px 20px 53px
+        @include breakpoint($tablet)
+            justify-content: center
+            flex-wrap: wrap
+            padding: 36px 20px 35px
     &__copyright
         font: 700 12px/2 $font-default
         color: $color-brown
+        @include breakpoint($tablet)
+            width: 50%
+            order: 2
+            justify-content: center
+            text-align: center
+            margin: 31px 0 0 0
     &__link
         text-decoration: none
         position: relative
         display: flex
         justify-content: flex-start
         align-items: center
+        @include breakpoint($tablet)
+            width: 50%
+            justify-content: center
         &_help
             font: 500 14px/1.714 $font-default
             color: $color-blue
             margin: 0 0 0 auto
+            @include breakpoint($tablet)
+                margin-left: 0
+                order: 0
             &:before
                 content: ''
                 display: block
@@ -31,6 +49,9 @@
             color: $color-black
             margin: 0 0 0 103px
             position: relative
+            @include breakpoint($tablet)
+                margin-left: 0
+                order: 1
             &:before
                 content: ''
                 display: block

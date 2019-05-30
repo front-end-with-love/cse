@@ -40,16 +40,16 @@
         &:first-child
             border-radius: 27.5px 0 0 27.5px
             &:after
-                @extend .icon-hp-color
-                margin: 0 0 0 9px
-            &.header__tab_active:after
                 @extend .icon-hp-white
+                margin: 0 0 0 9px
+            &__tab_active:after
+                @extend .icon-hp-color
         &:last-child
             border-radius: 0 27.5px 27.5px 0
             &:after
-                @extend .icon-dell-emc-color
-            &.header__tab_active:after
                 @extend .icon-dell-emc-white
+            &__tab_active:after
+                @extend .icon-dell-emc-color
         &_active
             background-color: $color-blue
             width: 160px
@@ -58,6 +58,7 @@
         display: flex
         justify-content: flex-start
         align-items: center
+        position: relative
     &__input-text
         user-select: none
         width: 32.742155525238745vw
@@ -77,6 +78,9 @@
         background: $color-white
         box-shadow: 0.616px 0.788px 25px 0 rgba($color-black, 0.07)
         transition: all 0.3s ease
+        @include breakpoint($tablet)
+            visibility: hidden
+            display: none
         @include placeholder
             color: $color-gray
             transition: all 0.3s ease
@@ -93,6 +97,10 @@
         background: $color-blue
         position: relative
         cursor: pointer
+        @include breakpoint($tablet)
+            width: 53px
+            height: 53px
+            border-radius: 26.5px
         &:after
             content: ''
             @extend .icon-search
@@ -100,3 +108,33 @@
             left: 50%
             top: 50%
             transform: translate3d(-50%,-50%,0)
+    &__search-bar
+        background: $color-white
+        box-shadow: 0.616px 0.788px 25px 0 rgba($color-black, 0.07)
+        border-radius: 27px
+        position: absolute
+        left: 0
+        top: 70px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-direction: column
+        width: 100%
+        padding: 25px
+        z-index: 1
+        // Удалить при переносе !!!!
+        @include breakpoint($tablet)
+            visibility: hidden
+            display: none
+    &__search-bar-item
+        font: 400 14px/1 $font-default
+        color: $color-black
+        transition: color 0.3s ease
+        cursor: pointer
+        text-decoration: none
+        margin: 0 0 16px
+        &:last-child
+            margin-bottom: 0
+        &:hover
+            color: $color-blue
+            text-decoration: underline

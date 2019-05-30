@@ -10,6 +10,8 @@
         font: 700 22px/1.091 $font-default
         color: $color-black
         margin: 0 0 37px
+        @include breakpoint($tablet)
+            margin: 0 0 49px
     &__save-btn
         text-decoration: none
         width: 263px
@@ -42,17 +44,36 @@
         border-top: 1px $color-gray-3 solid
         padding: 0 70px
         border-radius: 0 0 7px 7px
+        @include breakpoint($tablet)
+            padding: 22px 0 0 0
+            border-radius: 0 0 8px 8px
+            flex-direction: column
     &__col
         min-height: 100%
+        @include breakpoint($tablet)
+            padding-left: 30px
+            padding-right: 30px
+            width: 100%
+            min-height: auto
         &:first-child
+            @include breakpoint($tablet)
+                padding-bottom: 37px
         &:nth-child(2)
             padding: 68px 0 65px 70px
             margin: 0 0 0 74px
             border-left: 1px $color-white-4 solid
             background: url("../img/icons/icon-logo-gray.svg") bottom 73px right 0 no-repeat
+            @include breakpoint($tablet)
+                padding: 49px 30px 49px 30px
+                border-left: none
+                margin-left: 0
+                border-top: 1px $color-white-4 solid
+                background-position: bottom 41px right 32px
     &__item
         padding: 29px 0 40px 0
         border-bottom: 1px $color-white-4 solid
+        @include breakpoint($tablet)
+            padding: 0 0 26px 0
         &:last-child
             border-bottom: none
     &__item-row
@@ -139,17 +160,26 @@
         margin: 0 0 41px
         padding: 0 0 18px
         border-bottom: 1px $color-white-4 solid
+        @include breakpoint($tablet)
+            padding: 0 0 24px
     &__add-options-title
         font: 700 16px/1.285 $font-default
         color: $color-black
         margin: 0 0 24px
         padding: 8px 0 0 0
     &__add-options-wrapper
+        @include breakpoint($tablet)
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
     &__add-options-item
         display: flex
         justify-content: flex-start
         align-items: center
         margin: 0 0 19px
+        @include breakpoint($tablet)
+            width: 50%
     &__add-options-text
         font: 400 14px/1.285 $font-default
         color: $color-black
@@ -167,13 +197,25 @@
         border-bottom: 1px $color-white-4 solid
         @include breakpoint($desktop-special)
             flex-direction: column
+        @include breakpoint($tablet)
+            flex-direction: row
+            margin: 0 0 34px
     &__checkout-col
+        @include breakpoint($tablet)
+            width: 41%
         &:last-child
             margin: 0 0 0 30px
             text-align: center
             @include breakpoint($desktop-special)
                 margin: 40px 0 0 0
                 text-align: left
+            @include breakpoint($tablet)
+                margin: 0 0 0 30px
+                text-align: center
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: center
     &__checkout-sum
         font: 700 32px/0.75 $font-default
         color: $color-black
@@ -203,8 +245,14 @@
     &__help
     &__help-row
         margin: 0 0 46px
+        @include breakpoint($tablet)
+            margin: 0 0 48px
         &:last-child
             margin-bottom: 0
+            @include breakpoint($tablet)
+                display: flex
+                justify-content: flex-start
+                align-items: flex-start
     &__help-text
         font: 400 12px/1.833 $font-default
         color: $color-black
@@ -227,6 +275,8 @@
         display: flex
         justify-content: flex-start
         align-items: center
+        @include breakpoint($tablet)
+            margin: 0 0 0 60px
         &:before
             content: ''
             @extend .icon-question-blue
